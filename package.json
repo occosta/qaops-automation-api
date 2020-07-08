@@ -1,0 +1,68 @@
+{
+  "name": "companytest",
+  "version": "1.0.0",
+  "description": "COMMIT REPOSITORIO\r     # para comitar:\r     git status  (Verifica o status das alterações)\r     git branch   (verifica qual branch está)\r     git add nome da pasta ou arquivo para atualizar  ou  git add .\r     git commit -am \"comentário\"\r     git push origin master",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "events": "mocha ./test/billingDelivery/webhookEvents/**/*.js",
+    "basicProc": "mocha ./test/billingDelivery/basicProcessing/**/*.js",
+    "carga": "mocha ./test/billingDelivery/loadTest/*.js",
+    "inbox": "mocha ./test/billingDelivery/email/*.js",
+    "service": "mocha ./test/billingDelivery/microservice/*.js",
+    "todos": "mocha --recursive ./test/**/**/**//**/*.js",
+    "apiAlpha": "newman run newman/Smoke_Test.postman_collection.json -e newman/environment/Alpha_Client_Id_PagSeguro.postman_environment.json",
+    "smoke_test_alpha": "newman run newman/Smoke-Test-Billing2020-ALPHA.postman_collection.json -e newman/newman run newman/Smoke-Test-Billing2020-ALPHA.postman_collection.json -e newman/environment/ALPHAV2_SMOK_TEST.postman_environment.json --folder='Outlook_CNPJ'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/tilix-dev/companytest.git"
+  },
+  "keywords": [
+    "mocha",
+    "test",
+    "bdd"
+  ],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/tilix-dev/companytest#readme",
+  "devDependencies": {
+    "axios": "^0.19.2",
+    "chai": "^4.2.0",
+    "cucumber": "^5.1.0",
+    "dotenv": "^8.1.0",
+    "egoroof-blowfish": "^2.2.0",
+    "eslint": "^6.1.0",
+    "file-system": "^2.2.2",
+    "form-data": "^2.5.1",
+    "jquery": "^3.5.1",
+    "knex": "^0.18.4",
+    "mocha": "^6.2.3",
+    "mocha-logger": "^1.0.6",
+    "mocha-steps": "^1.3.0",
+    "moment": "^2.24.0",
+    "mysql": "^2.17.1",
+    "newman": "^4.5.5",
+    "newman-reporter-htmlextra": "^1.8.6",
+    "read-file": "^0.2.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "supertest": "^4.0.2"
+  },
+  "contributors": [
+    "Douglas Ferreira",
+    "Igor Ferro",
+    "Julianny Silva",
+    "Olivia Costa"
+  ],
+  "dependencies": {
+    "aes-js": "^3.1.2",
+    "console.table": "^0.10.0",
+    "custom-env": "^1.0.2",
+    "form-urlencoded": "^4.0.1",
+    "mysql-aes": "0.0.1"
+  }
+}
